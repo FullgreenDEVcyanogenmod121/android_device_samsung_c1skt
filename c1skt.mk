@@ -15,9 +15,9 @@
 #
 
 # Include common makefile
-$(call inherit-product, device/samsung/smdk4412-common/common.mk)
+$(call inherit-product, device/samsung/c1skt-common/common.mk)
 
-LOCAL_PATH := device/samsung/i9300
+LOCAL_PATH := device/samsung/c1skt
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -33,7 +33,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/m0
+    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/c1skt
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -101,4 +101,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.isUsbOtgEnabled=true
 
-$(call inherit-product-if-exists, vendor/samsung/i9300/i9300-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/c1skt/c1skt-vendor.mk)
